@@ -1,0 +1,103 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href ="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+
+    <title>TicketTist</title>
+</head>
+<body>
+
+
+    <!-- <center> -->
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+
+      <br>
+      <div class="container">
+        <form action="" id="ft-form" method="POST" accept-charset="UTF-8">
+            <fieldset>
+            <legend>Personal Info</legend>
+            <label>
+                Name
+                {% csrf_token %}
+                {{form.UserName}}
+            </label>
+            <div class="two-cols">
+                <label>
+                Email address
+                {{form.Email}}
+                <!-- <input type="email" name="email" required> -->
+                </label>
+                <label>
+                Phone number
+                <!-- <input type="tel" name="phone"> -->
+                {{form.MobileNumber}}
+                </label>
+            </div>
+
+
+
+            <div class="two-cols">
+                <fieldset>
+                <legend>Project Details</legend>
+                <label>
+                Is Project Started
+                {{form.IsProjectStarted}}
+                <!-- <input type="email" name="email" required> -->
+                </label>
+            </div>
+            
+            <div class="two-cols">
+                    <label>
+                    Description
+                    {{form.Description}}
+                    <!-- <input type="email" name="email" required> -->
+                    </label>
+            </div>
+            </fieldset>
+            
+            <div class="btns">
+            <!-- <input type="text" name="_gotcha" value="" style="display:none;">
+            <input type="submit" value="Submit request"> -->
+            <button type="Submit" class="btn btn-success">Submit</button>
+
+            </div>
+        </form>
+    </div>
+
+
+
+<!-- 
+
+     <div class="container">
+        <p>ticket form here</p>
+
+        <hr>
+       <form action="" method="post">
+          {{form.as_p}}
+          {% csrf_token %}
+          <button type="Submit" class="btn btn-success">Submit</button>
+      </form>
+     </div>
+      </center> -->
+</body>
+</html>

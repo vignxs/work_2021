@@ -1,0 +1,11 @@
+go to the project location 
+
+c/Users/ELCOT/Documents/pythonwork/IGS~
+
+to create a new venv
+
+virtualenv ticket
+
+to activate venv
+
+source ticket/bin/activate

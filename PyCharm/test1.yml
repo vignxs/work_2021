@@ -1,0 +1,7 @@
+curr_ods10:
+  sql: |
+    select column_name from infromation_schema.columns where table_name=\'$1\' order by ordinal_position
+  params:
+    - table_name
+    - vignesh
+    - names
